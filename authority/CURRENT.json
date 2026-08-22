@@ -1,8 +1,9 @@
 {
   "authorityRef": "authority:ordivon:research-owner:semantics-of-computational-descriptions",
-  "currentAuthorityVersionRef": "sha256:3319f37f081908e545c708f79e489c3b2a1c54cb03453fa2ebe32bc6e72cbd4f",
+  "currentAuthorityVersionRef": "sha256:f98fef8a3389b9234d95dc5f1e3ce8a18f34045e117bd7c2cf267ec5351a07ba",
   "kind": "ordivon.research-owner-current",
   "ownerResearchRef": "research-owner:semantics-of-computational-descriptions",
-  "publication": "authority/publications/3319f37f081908e545c708f79e489c3b2a1c54cb03453fa2ebe32bc6e72cbd4f.json",
+  "previousAuthorityVersionRef": "sha256:3319f37f081908e545c708f79e489c3b2a1c54cb03453fa2ebe32bc6e72cbd4f",
+  "publication": "authority/publications/f98fef8a3389b9234d95dc5f1e3ce8a18f34045e117bd7c2cf267ec5351a07ba.json",
   "schemaVersion": 1
 }

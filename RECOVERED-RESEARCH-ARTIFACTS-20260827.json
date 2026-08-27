@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "kind": "ordivon.scd.recovered-research-artifacts",
+  "disposition": "OWNER_NATIVE_RECOVERY_MATERIALIZATION",
+  "semanticStandingChange": false,
+  "sourceRepository": "ordivon-computing",
+  "artifacts": [
+    {
+      "path": "formalization/CF-v0.1-CANONICAL-FALSIFICATION-CORPUS.md",
+      "sha256": "2b4852b265cd004655741215c8267c77a7b3cab572495a637c5d9e199db9c72d",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "formalization/EXTERNAL-THEORY-MAPPINGS.md",
+      "sha256": "1c58aebc77f112388878f3e1a15b7bec1ffd4df83d72c5499dec50da9a7787e1",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "formalization/FORMAL-GAP-CAMPAIGN-CLOSEOUT-v0.1.md",
+      "sha256": "94996812bc0b8a5ec2e00554eded14a733604451c84b3485fc939cfd3c922469",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "formalization/GAP-INVESTIGATION-G1-v0.1.md",
+      "sha256": "74c87e42e8747178d3123730c6745b25dd5a3ea0105f74a4f2d0a344a6445a06",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "formalization/GAP-INVESTIGATION-G3-v0.1.md",
+      "sha256": "e5e0e95682a4d2cbfcafb70d02a7fb5ed1b5bec7b955f77ab1605387cdabfe90",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "formalization/GAP-INVESTIGATIONS-G2-G4-v0.1.md",
+      "sha256": "33178770c9073f97d98f8fd5513828ccce54cd4ca6e5d56f1767e0a8aae7cf74",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "formalization/K0.2-ROLE-MODEL.md",
+      "sha256": "6d1461124eb6cc58abcc01d07bac6bb896b2353a674c43635fc3b6e431868a70",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "formalization/README.md",
+      "sha256": "8c40277e078b88de080847ed8bf07ef6baaf9868b53bc1f3f04d029b376e78fa",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "formalization/SCDF-RESPONSIBILITY-MATRIX-v0.1.md",
+      "sha256": "923a6b0e18acaa316b2f8d951b0d5f2d90a2e76efe023bdff257d17ee867aef7",
+      "sourceComputingRevision": "bc1aba930ab6de64680ac2b8fab4d29fe2aa0348"
+    },
+    {
+      "path": "applied/CROSS-CONSUMER-FINDINGS-v0.1.md",
+      "sha256": "b31d646b7df9f2c199af2e6e61f2e54e5f93022072e40613516b7c68a147965d",
+      "sourceComputingRevision": "9424ed240da1c6d13a12266897384fb848434aa6"
+    },
+    {
+      "path": "applied/CROSS-CONSUMER-FINDINGS-v0.2.md",
+      "sha256": "840888f11a337f8e6b740f9d1269e9d3aa0c52606e073e6f17834b7ea32e5881",
+      "sourceComputingRevision": "9424ed240da1c6d13a12266897384fb848434aa6"
+    },
+    {
+      "path": "applied/DOGFOOD-ROUND-1-A1-A6.md",
+      "sha256": "7a6e40283f77504602d5945219c43360648ed1a677f5f4ad1d1effd74da5cd82",
+      "sourceComputingRevision": "9424ed240da1c6d13a12266897384fb848434aa6"
+    },
+    {
+      "path": "applied/DOGFOOD-ROUND-2-A7-A8.md",
+      "sha256": "a17f8665f0b0563d1ed5e17c07290f4aac2a2fcb13a83215efb78303f6ae183c",
+      "sourceComputingRevision": "9424ed240da1c6d13a12266897384fb848434aa6"
+    },
+    {
+      "path": "applied/README.md",
+      "sha256": "bb7e2f9512d9a1a935543d7867f1e83ed7cdc15407d436d2a9b1eaa77a9f7df0",
+      "sourceComputingRevision": "9424ed240da1c6d13a12266897384fb848434aa6"
+    }
+  ]
+}

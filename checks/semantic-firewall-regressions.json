@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "ordivon.scd.semantic-firewall-regression-set",
+  "truthRole": "non-authoritative-executable-recovery-guard",
+  "purpose": "Detect accidental loss of a small set of consequence-heavy SCD/cross-owner non-inferences. Passing proves recoverability of the declared boundary text, not semantic completeness or theorem validity.",
+  "cases": [
+    {
+      "id": "host-ready-not-semantic-current",
+      "sourcePath": "applied/CROSS-CONSUMER-FINDINGS-v0.2.md",
+      "requiredTerms": ["Host READY", "SemanticCurrent"],
+      "relation": "not-equal"
+    },
+    {
+      "id": "runtime-success-not-semantic-correctness",
+      "sourcePath": "applied/CROSS-CONSUMER-FINDINGS-v0.2.md",
+      "requiredTerms": ["RuntimeSuccess", "SemanticCorrectness"],
+      "relation": "not-equal"
+    },
+    {
+      "id": "exact-projection-not-semantic-sufficiency",
+      "sourcePath": "TRAA-DERIVED-THEORY-CANDIDATE-LIVE-DOGFOOD-20260819.md",
+      "requiredTerms": ["ExactProjection", "SemanticSufficiency"],
+      "relation": "not-equal"
+    },
+    {
+      "id": "projection-not-owner-truth",
+      "sourcePath": "ENVIRONMENT-HABITAT-CENSUS.md",
+      "requiredTerms": ["Projection", "OwnerTruth"],
+      "relation": "not-equal"
+    },
+    {
+      "id": "capability-grant-not-normative-permission",
+      "sourcePath": "ENVIRONMENT-HABITAT-CENSUS.md",
+      "requiredTerms": ["Capability/Grant", "NormativePermission"],
+      "relation": "not-equal"
+    },
+    {
+      "id": "historical-authority-not-current-standing",
+      "sourcePath": "ENVIRONMENT-HABITAT-CENSUS.md",
+      "requiredTerms": ["HistoricalAuthorityEvidence", "CurrentStanding"],
+      "relation": "not-equal"
+    }
+  ]
+}

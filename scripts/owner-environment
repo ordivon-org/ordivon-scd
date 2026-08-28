@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+repo=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+mode=${1:-}
+python_bin=${PYTHON_BIN:-$(command -v python3 || true)}
+
+usage() {
+  cat <<'TXT'
+usage: scripts/owner-environment doctor|test|cold-start
+
+doctor      verify the dependency-free Python execution plane
+test        run SCD owner-native recovery and semantic-firewall checks
+cold-start  prove the same portable gate from an unwarmed source copy
+
+SCD has no package/runtime environment to bootstrap. This gate verifies only
+owner recovery/instrumentation already defined by checks/test_owner_recovery.py.
+TXT
+}
+
+doctor() {
+  [[ -n "$python_bin" && -x "$python_bin" ]] || { echo 'SCD owner environment requires python3' >&2; exit 1; }
+  "$python_bin" - <<'PY'
+import sys
+if sys.version_info < (3, 11):
+    raise SystemExit(f"SCD recovery checks require Python >=3.11, got {sys.version.split()[0]}")
+print(f"owner environment doctor: valid dependency-free python={sys.version.split()[0]}")
+PY
+}
+
+run_tests() {
+  doctor
+  (cd "$repo" && "$python_bin" -m unittest -v checks.test_owner_recovery)
+  echo 'owner environment test: passed'
+}
+
+case "$mode" in
+  doctor) doctor ;;
+  test) run_tests ;;
+  cold-start)
+    doctor
+    tmp=$(mktemp -d -t ordivon-scd-owner-env-XXXXXX)
+    trap 'rm -rf "$tmp"' EXIT
+    mkdir -p "$tmp/repo"
+    (cd "$repo" && tar --exclude=.git --exclude='__pycache__' --exclude='*.pyc' -cf - .) | tar -xf - -C "$tmp/repo"
+    PYTHON_BIN="$python_bin" "$tmp/repo/scripts/owner-environment" test
+    echo 'owner environment cold-start: passed'
+    ;;
+  --help|-h) usage ;;
+  *) usage >&2; exit 2 ;;
+esac

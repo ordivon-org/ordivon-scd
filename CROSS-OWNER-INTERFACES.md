@@ -8,9 +8,9 @@ CP imports constituted meaning/evaluation/preservation semantics and owns regime
 
 Runtime owns actual admitted-operation realization, execution/lifecycle, persistence/evidence, support/reuse/discharge, and invalidation/revalidation. SCD owns abstract computational-description semantics such as compatibility, equivalence/refinement, composition, and preservation. Concrete Runtime binding to those semantics is a cross-owner bridge, not dual canonical ownership.
 
-## Network
+## Interlocus
 
-Network owns actual qualified cross-locus capability, topology, resolution, forwarding, and service realization. SCD may supply semantic predicates used by Network contracts.
+Interlocus (historical owner identity/name: `research-owner:network` / Network) owns actual qualified cross-locus capability, topology, resolution, forwarding, and service realization. SCD may supply semantic predicates used by Interlocus contracts.
 
 ## Harness
 

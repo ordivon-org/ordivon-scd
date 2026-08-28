@@ -1,4 +1,4 @@
-# SCD Environment / Habitat Census — Rounds 1–2
+# SCD Environment / Habitat Census — Rounds 1–3
 
 Status: **EMPIRICAL / EXPLANATORY / NON-AUTHORITATIVE**.
 
@@ -244,6 +244,38 @@ A load-bearing distinction may be carried by a caller binding, digest fence, aut
 
 Round 2 does not admit a common SCD/Normative `FactEnvelope`, QRNA ownership transfer, a global currentness schema or any shared standing service. The current Normative line itself freezes QRNA as a consumer-local pull-first pattern and rejects a shared canonical FactEnvelope at present evidence.
 
-Representation-sensitive Computational Possibility research is a strong **candidate pressure**: the same semantic referent can have different computational possibility under different operational presentations or access regimes, and theorem transport requires relation strength appropriate to the target computability/complexity/deployment claim. But the current CP branch has not yet reached its first named actual consumer, so it is not counted here as a third positive SCD habitat.
+The earlier Round-2 note treated representation-sensitive Computational Possibility as **candidate pressure** because the observed CP branch had not yet reached a named actual consumer. That source-fenced statement is now historical: current CP `c177b597dab57fbbaf1884ecb9409111f0c4c126` has an earned Engineering Consumption surface and bounded consumer dogfood. Round 3 therefore re-adjudicates this candidate below rather than silently carrying the old gate forward.
 
-The next admission gate remains strict: require a current named consumer, exact target judgement/consequence and a natural deletion/control discriminator. If no third independent consumer exists, Environment Formation should phase-hold with H1 and H7 rather than standardize their common shape prematurely.
+The admission rule remains strict: require a current named consumer, exact target judgement/consequence and a natural deletion/control discriminator. Three independent positive families now meet that bar (H1, H7, H8), but their carriers remain heterogeneous; count alone does not authorize a shared SCD schema or service.
+
+## 16. Round 3 — H8 computational capability-substitution description adequacy
+
+Class: **ADMITTED NATURAL POSITIVE**, with current disposition **owner-local preservation / NO NEW SCD COMPONENT**.
+
+Current Computational Possibility revision `c177b597dab57fbbaf1884ecb9409111f0c4c126` supplies the successor evidence that was absent at the Round-2 fence. CP now has a named Harness-facing capability-substitution consumer seam and a bounded external-formal-carrier/Runtime dogfood over a history-sensitive provider contract.
+
+The relevant consumer judgement is not merely whether two calls each return a pointwise-valid value. The consumer slot requires the two-call history contract:
+
+`output_1 = 0` and `output_2 = output_1 + 1`.
+
+An external Z3 4.16.0 carrier produced the exact pointwise-valid counterexample `[0,0]`. Runtime then observed `PointwiseOnlyProvider -> [0,0]`, while the control `StatefulCounterProvider -> [0,1]` satisfied both the same pointwise relation and the stronger history contract. CP Applicability records the narrow constructive consequence for the exact Runtime target and preserves `PointwiseValidity != HistoryValidity`.
+
+This creates a genuine SCD description-adequacy pressure: a projection that preserves only the pointwise response relation collapses providers that differ under the load-bearing history-sensitive consumer judgement. The missing distinction is semantic/behavioral structure, while the consequence — whether the replacement preserves the required computational capability — remains CP-owned.
+
+The natural control is material rather than terminological:
+
+- same bounded pointwise output relation;
+- different retained history/state behavior;
+- different justified substitutability consequence for the named consumer obligation.
+
+The CP Applicability conformance set separately retains deletion controls for required semantic transport blocks, but H8 does not promote that engineering schema into SCD truth. The dogfood instead supports the owner split:
+
+`SCD description/behavior adequacy != CP computational substitutability verdict != Harness admission != Runtime execution truth`.
+
+Consumption result: **positive semantic distinction, NO NEW COMPONENT**. Existing SCD comparison/abstraction/transport responsibilities can explain why pointwise-only description is too coarse for this judgement; CP owns the actual theorem-transport/applicability consequence, Harness owns concrete composition admission, and Runtime owns the observed provider traces. No SCD capability registry, universal semantic envelope, theorem engine or provider schema is earned.
+
+## 17. Round-3 ceiling and next gate
+
+H1, H7 and H8 now provide three heterogeneous natural positive habitats: authority-fenced semantic recovery, normative description adequacy, and computational capability-substitution adequacy. Their shared shape is still only judgement-relative anti-collapse before a consequence-bearing decision. Their physical carriers and owner-native standings remain different.
+
+Therefore Round 3 still does **not** admit a common wire format, global currentness/standing service, `FactEnvelope`, `BridgeStanding` engine, universal SCD Environment object or mandatory Agent prompt schema. A future materialization must be forced by repeated consumer friction that cannot be solved with owner-local carriers while preserving the current semantic firewalls.

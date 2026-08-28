@@ -43,6 +43,19 @@ class SCDOwnerRecoveryTests(unittest.TestCase):
             self.assertIn(token, corpus)
             self.assertTrue(path.is_file(), str(path))
 
+    def test_current_navigation_uses_current_round_and_owner_name(self) -> None:
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        interfaces = (ROOT / "CROSS-OWNER-INTERFACES.md").read_text(encoding="utf-8")
+        self.assertIn("Environment / Habitat Census — Rounds 1–3", readme)
+        self.assertNotIn("Environment / Habitat Census — Round 1]", readme)
+        self.assertIn("## Interlocus", interfaces)
+        self.assertNotIn("## Network", interfaces)
+        self.assertIn("research-owner:network", interfaces)
+        habitat = (ROOT / "ENVIRONMENT-HABITAT-CENSUS.md").read_text(encoding="utf-8")
+        self.assertIn("Round 3 — H8 computational capability-substitution description adequacy", habitat)
+        self.assertIn("c177b597dab57fbbaf1884ecb9409111f0c4c126", habitat)
+        self.assertNotIn("current CP branch has not yet reached its first named actual consumer", habitat)
+
     def test_owner_readme_links_recovered_surfaces(self) -> None:
         text = (ROOT / "README.md").read_text(encoding="utf-8")
         for target in ("formalization/README.md", "applied/README.md", "RECOVERED-RESEARCH-ARTIFACTS-20260827.json"):

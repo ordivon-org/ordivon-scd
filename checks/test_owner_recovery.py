@@ -56,6 +56,27 @@ class SCDOwnerRecoveryTests(unittest.TestCase):
         self.assertIn("c177b597dab57fbbaf1884ecb9409111f0c4c126", habitat)
         self.assertNotIn("current CP branch has not yet reached its first named actual consumer", habitat)
 
+    def test_cross_consumer_current_synthesis_has_separate_external_revalidation_fence(self) -> None:
+        current = json.loads((ROOT / "authority" / "CURRENT.json").read_text(encoding="utf-8"))
+        publication = json.loads((ROOT / current["publication"]).read_text(encoding="utf-8"))
+        corpus = json.dumps(publication, ensure_ascii=False)
+        note = (ROOT / "applied" / "CROSS-CONSUMER-FINDINGS-v0.2-REVALIDATION-20260828.md").read_text(encoding="utf-8")
+        fences = {
+            "Host": "10b2d33cb28d825875fcd2f46bd046ef855b2ed1",
+            "Harness": "97708bc0b6a6eea556ca580dab5c0417e6df108d",
+            "Runtime": "772c01c551e3ed9ad9e11bc63395adad070ec486",
+        }
+        for owner, fence in fences.items():
+            self.assertIn(owner, note)
+            self.assertIn(fence, note)
+            self.assertIn(fence, corpus)
+        manifest = json.loads((ROOT / "RECOVERED-RESEARCH-ARTIFACTS-20260827.json").read_text(encoding="utf-8"))
+        recovered = {item["path"] for item in manifest["artifacts"]}
+        self.assertNotIn("applied/CROSS-CONSUMER-FINDINGS-v0.2-REVALIDATION-20260828.md", recovered)
+        self.assertIn("not a floating currentness assertion", corpus)
+        self.assertIn("original dogfood observations remain historical/source-fenced", corpus)
+        self.assertEqual(publication["source"]["sourceRevision"], "dbc8f297f79b68f9a63d8bae7717fb4d03b0c748")
+
     def test_owner_readme_links_recovered_surfaces(self) -> None:
         text = (ROOT / "README.md").read_text(encoding="utf-8")
         for target in ("formalization/README.md", "applied/README.md", "RECOVERED-RESEARCH-ARTIFACTS-20260827.json"):

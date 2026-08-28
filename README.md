@@ -31,7 +31,7 @@ Consumption-oriented navigation:
 Research instrumentation and applied evidence recovery:
 
 - [Formalization & Canonical Falsification](formalization/README.md) — owner-native recovery of K0.2, CF-v0.1, external-theory mappings, responsibility matrix, negative G1–G4 investigations and the formal-gap closeout. These remain research instrumentation / negative evidence, not Foundation truth.
-- [Applied SCD — Consumer Dogfood](applied/README.md) — owner-native recovery of A1–A8 and Cross-Consumer Findings v0.2. These are bounded consumer falsification evidence and do not change SCDF standing.
+- [Applied SCD — Consumer Dogfood](applied/README.md) — owner-native recovery of A1–A8 and Cross-Consumer Findings v0.2. [External Revalidation — 2026-08-28](applied/CROSS-CONSUMER-FINDINGS-v0.2-REVALIDATION-20260828.md) separately records exact Host/Harness/Runtime current-to-source evidence. Historical dogfood bytes, present SCD synthesis standing, and foreign-owner currentness remain distinct; none changes SCDF standing.
 - [`RECOVERED-RESEARCH-ARTIFACTS-20260827.json`](RECOVERED-RESEARCH-ARTIFACTS-20260827.json) records exact source revisions and byte digests for the recovered artifacts. The recovery fixes physical discoverability only; `semanticStandingChange=false`.
 
 Mechanical owner recovery can be replayed without a package/runtime dependency plane:

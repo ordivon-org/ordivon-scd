@@ -83,6 +83,16 @@ class SCDOwnerRecoveryTests(unittest.TestCase):
             self.assertIn(target, text)
             self.assertTrue((ROOT / target).exists(), target)
 
+    def test_present_current_pointer_requires_present_source_horizon(self) -> None:
+        text = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("Source horizon and `CURRENT.json`", text)
+        self.assertIn("canonical upstream repository `main`", text)
+        self.assertIn("after explicitly observing remote freshness", text)
+        self.assertIn("current **to that source horizon**", text)
+        self.assertIn("does not by itself prove present owner currentness", text)
+        self.assertIn("Preserve that historical pointer and immutable publication", text)
+        self.assertIn("Source integration chooses which `CURRENT.json` is authoritative now", text)
+
     def test_semantic_firewall_regressions_remain_explicitly_recoverable(self) -> None:
         fixture = json.loads(
             (ROOT / "checks" / "semantic-firewall-regressions.json").read_text(encoding="utf-8")

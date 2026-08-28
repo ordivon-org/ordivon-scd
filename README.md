@@ -18,6 +18,14 @@ Current invariants:
 
 Start with [OWNER-BOUNDARY-AND-STATUS](OWNER-BOUNDARY-AND-STATUS.md) and [SCDF-REGISTRY-AND-STANDING](SCDF-REGISTRY-AND-STANDING.md).
 
+### Source horizon and `CURRENT.json`
+
+For a present-tense claim about **current SCD owner research standing**, first resolve the canonical upstream repository `main` after explicitly observing remote freshness; in the current Git topology this is the fetched commit corresponding to `origin/main`. Only then should that source horizon's `authority/CURRENT.json` be consumed as the current owner `AuthorityVersionRef` pointer.
+
+An exact historical checkout may contain a fully valid, digest-matching `authority/CURRENT.json`. That means the pointer was current **to that source horizon**; it does not by itself prove present owner currentness after `main` has advanced. Preserve that historical pointer and immutable publication rather than rewriting them. A local `refs/heads/main`, worktree `HEAD`, detached Runtime Workspace, or Workspace name can therefore establish exact-source identity without selecting the present source horizon.
+
+The source-integration horizon and the publication's own `source.sourceRevision` are also distinct. The publication may deliberately fence the owner evidence at an earlier exact revision while a later `main` commit merely republishes or records the current pointer. Source integration chooses which `CURRENT.json` is authoritative now; the selected immutable publication then defines its own exact evidence/source boundary.
+
 Current derived-theory candidate research:
 
 - [TRAA — Derived-Theory Candidate / Live Dogfood Closeout — 2026-08-19](TRAA-DERIVED-THEORY-CANDIDATE-LIVE-DOGFOOD-20260819.md) — transformation-relative semantic substitutability, live Agent bridge-attractor dogfood, cross-owner replication, falsified rivals, and novelty boundary. `CANDIDATE / NOT_FROZEN`; does not alter the SCDF registry.

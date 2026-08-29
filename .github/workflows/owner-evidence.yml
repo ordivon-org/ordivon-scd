@@ -23,11 +23,16 @@ jobs:
           python-version: "3.12"
       - name: Record bounded evidence identity
         shell: bash
+        env:
+          CANDIDATE_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           set -euo pipefail
           printf 'event=%s\n' "$GITHUB_EVENT_NAME"
           printf 'github_sha=%s\n' "$GITHUB_SHA"
           printf 'checkout_head=%s\n' "$(git rev-parse HEAD)"
+          printf 'candidate_head_sha=%s\n' "${CANDIDATE_HEAD_SHA:-}"
+          printf 'base_sha=%s\n' "${BASE_SHA:-}"
           printf 'head_ref=%s\n' "${GITHUB_HEAD_REF:-}"
           printf 'base_ref=%s\n' "${GITHUB_BASE_REF:-}"
           printf 'workflow_ref=%s\n' "$GITHUB_WORKFLOW_REF"
@@ -74,7 +79,9 @@ jobs:
         env:
           EVIDENCE_JOB_RESULT: ${{ needs.owner-cold-start.result }}
           EVIDENCE_OUTCOME: ${{ needs.owner-cold-start.outputs.evidence_outcome }}
-          SUBJECT_SHA: ${{ github.sha }}
+          INTEGRATION_SHA: ${{ github.sha }}
+          CANDIDATE_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_REF: ${{ github.head_ref }}
           BASE_REF: ${{ github.base_ref }}
         run: |
@@ -89,7 +96,10 @@ jobs:
           fi
           printf 'policy=ordivon.shadow-source-admission.v1\n'
           printf 'transition=candidate-source-to-canonical-main\n'
-          printf 'subject_sha=%s\n' "$SUBJECT_SHA"
+          printf 'candidate_head_sha=%s\n' "$CANDIDATE_HEAD_SHA"
+          printf 'base_sha=%s\n' "$BASE_SHA"
+          printf 'integration_sha=%s\n' "$INTEGRATION_SHA"
+          printf 'subject_sha=%s\n' "$INTEGRATION_SHA"
           printf 'head_ref=%s\n' "$HEAD_REF"
           printf 'base_ref=%s\n' "$BASE_REF"
           printf 'evidence_job_result=%s\n' "$EVIDENCE_JOB_RESULT"
@@ -100,6 +110,9 @@ jobs:
           {
             printf '### Shadow source admission\n\n'
             printf -- '- Transition: candidate-source-to-canonical-main\n'
+            printf -- '- Candidate head: %s\n' "$CANDIDATE_HEAD_SHA"
+            printf -- '- Base: %s\n' "$BASE_SHA"
+            printf -- '- Integration candidate: %s\n' "$INTEGRATION_SHA"
             printf -- '- Evidence outcome: %s\n' "$evidence"
             printf -- '- Decision: %s\n' "$decision"
             printf -- '- Authority: NONE_SHADOW_ONLY\n'

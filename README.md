@@ -1,3 +1,5 @@
+> **Modification notice (Apache-2.0 §4(b)):** This file contains changes from an Apache-2.0-licensed upstream version in `ordivon-computing`.
+
 # Semantics of Computational Descriptions — Research Core
 
 Canonical owner/project: **Semantics of Computational Descriptions (SCD)**.
